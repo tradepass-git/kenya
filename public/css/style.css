@@ -1,0 +1,57 @@
+:root {
+    --tp-primary-color: #e22013;
+    --tp-ff-primary: "gotham", sans-serif;
+    --tp-ff-heading: "AeonikBlack", sans-serif;
+    --tp-ff-heading-bold: "AeonikBold", sans-serif;
+    --tp-ff-sub-heading: "AeonikTRIAL", sans-serif;
+    --tp-ff-gallery: "MangoGrotesque", sans-serif;
+    --tp-ff-sub-gallery: "InterRegular", sans-serif;
+    --tp-common-white: #fff;
+    --tp-bg-1: #f5f5f5;
+    --tp-black-1: #131313;
+    --tp-progress: #ef928d;
+    --tp-number-fonts: "MangoGrotesque-Regular", sans-serif;
+    --tp-number-insight-fonts: "MangoGrotesque-light", sans-serif;
+    --tp-number-testimonial-fonts: "MangoGrotesque-Black", sans-serif;
+    --tp-border: #f7f8fb;
+    --tp-border-2: #cfd6ea;
+    --tp-bg-2: #000;
+    --top-distance-1: 203.67822265625px;
+    --vh-in-px: 8px;
+    --vh: 1vh;
+    --bs-black-rgb: 0, 0, 0;
+    --animation-primary-expo: 0.5s cubic-bezier(0.87, 0, 0.13, 1);
+    --bs-purple: #08546c;
+    --bs-teal: #44cfcb;
+    --bs-yellow: #fff05a;
+    --headings-margin-top: 0px;
+    --headings-font-family: var(--bs-font-terciary);
+    --headings-font-weight: 500;
+    --headings-line-height: 1.2;
+    --bs-heading-color: currentColor;
+    --bs-font-terciary: Montserrat, sans-serif;
+    --animation-elastic-css: 0.5s cubic-bezier(0.5, 1.5, 0.5, 1);
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --tp-bg-3: #ff9600;
+}
+
+.main-menu ul li ul.submenu {
+    position: absolute;
+    min-width: 230px;
+    border-top: 4px solid var(--tp-primary-color);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+}
+
+.main-menu ul li:hover>ul.submenu {
+    opacity: 1;
+    visibility: visible;
+}

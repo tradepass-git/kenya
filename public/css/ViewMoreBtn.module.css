@@ -1,0 +1,122 @@
+.conference_btn {
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    outline: 0;
+    border-radius: 999px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.conference_btn .icon {
+    transition: transform var(--animation-elastic-css);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    transform: rotate(0.001deg);
+    flex-shrink: 0;
+}
+
+.conference_btn .icon.first {
+    transform: scale(0) rotate(0.001deg);
+    transform-origin: left;
+}
+
+.btn-content {
+    position: relative;
+    height: 60px;
+    transform: translateX(-60px) rotate(0.001deg);
+    transition: transform var(--animation-elastic-css);
+}
+
+.btn-fill {
+    background: currentColor;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    top: 0;
+    left: 0;
+}
+
+.text-purple {
+    color: var(--tp-primary-color) !important;
+}
+
+.text-white {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-purple {
+    color: var(--tp-primary-color) !important;
+}
+
+.text-white {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.btn-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+    top: -1px;
+    white-space: nowrap;
+    position: relative;
+    color: currentColor;
+    border-radius: 999px;
+}
+
+.conference_btn .icon.second {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    transform: scale(1) rotate(0.001deg);
+    transform-origin: right;
+}
+
+.icon .icon-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.icon .icon-content {
+    width: 18px;
+    position: relative;
+    display: flex;
+    transform: rotate(0.001deg);
+    transition: transform var(--animation-elastic-css);
+}
+
+@media (hover: hover) {
+    .conference_btn:hover .btn-content {
+        transform: translateX(0px) rotate(0.001deg);
+    }
+
+    .conference_btn:hover .icon.first {
+        transform: scale(1) rotate(0.001deg);
+    }
+
+    .conference_btn:hover .icon.second {
+        transform: scale(0) rotate(0.001deg);
+    }
+}
