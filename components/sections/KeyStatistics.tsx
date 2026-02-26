@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import customFonts from "@/public/css/CustomFonts.module.css";
 import ProgressBar from "@/components/ui/ProgressBar";
+import CircularProgress from "@/components/ui/CircularProgress";
 const KeyStatistics = () => {
   useEffect(() => {
     const speed = 20;
@@ -27,7 +28,7 @@ const KeyStatistics = () => {
   }, []);
 
   return (
-    <section className='relative flex flex-col gap-[40px]'>
+    <section className='key-statistics relative flex flex-col gap-[40px]'>
       <h2 className={`${customFonts["font-aeonik-black"]} text-center font-semibold uppercase leading-[1.4] min-[992px]:text-[2.3rem] text-[1.8rem]`}>Key Statistics from 2025</h2>
       <div className="overflow-hidden w-full mx-auto px-20" >
         <div className="flex flex-col gap-[30px]">
@@ -52,7 +53,7 @@ const KeyStatistics = () => {
             </div>
             <div className="lg:col-span-4 col-span-12">
               <div className='border h-full border-[#1919191f] rounded-[10px] flex flex-col px-[40px] py-[40px] gap-[40px] justify-center'>
-                <img src="/images/chart4.svg" alt="WFIS Kenya" className="w-full h-auto" />
+                <img src="/images/chart4.svg" alt="WFIS Kenya" className="mx-auto lg:w-[80%] w-full h-auto" />
                 <ul className='text-[1rem] space-y-20'>
                   <li className="flex items-center gap-10"><span className="w-[12] h-[12] bg-[#d54045] rounded-full"></span>Final Decision Makers</li>
                   <li className="flex items-center gap-10"><span className="w-[12] h-[12] bg-[#483f6d] rounded-full"></span>Evaluators</li>
@@ -73,19 +74,31 @@ const KeyStatistics = () => {
             </div>
           </div>
           <div className='grid grid-cols-12 items-stretch gap-[30px] w-full mx-auto'>
-            <div className="lg:col-span-5 col-span-12">
-              <div className='border border-[#1919191f] rounded-[10px] flex flex-col px-[40px] py-[40px] gap-[40px]'>
+            <div className="lg:col-span-5 col-span-12 flex">
+              <div className='border border-[#1919191f] rounded-[10px] w-full h-full flex flex-col px-[40px] py-[40px] gap-[40px]'>
                 <div className='flex flex-col gap-[10px]'>
                   <h3 className={`${customFonts["font-aeonik-black"]} text-[1.8rem] font-semibold leading-[1.4] uppercase`}>Budget-based Bifurcation Of Delegates</h3>
                   <p className="text-[1rem]">All delegates at WFIS 2025 - Kenya were pre-qualified based on their allocated budgets for the procurement of new solutions.</p>
                 </div>
+                <img src="/images/chart-2-2.svg" alt="WFIS Kenya" className="mx-auto lg:w-[60%] w-full h-auto" />
               </div>
             </div>
-            <div className="lg:col-span-7 col-span-12">
-              <div className='border border-[#1919191f] rounded-[10px] flex flex-col px-[40px] py-[40px] gap-[40px]'>
+            <div className="lg:col-span-7 col-span-12 flex">
+              <div className='border border-[#1919191f] rounded-[10px] w-full h-full flex flex-col px-[40px] py-[40px] gap-[40px]'>
                 <div className='flex flex-col gap-[10px]'>
-                  <h3 className={`${customFonts["font-aeonik-black"]} text-[1.8rem] font-semibold leading-[1.4] uppercase`}>Timeline-based Bifurcation Of Delegates</h3>
+                  <h3 className={`${customFonts["font-aeonik-black"]} lg:w-[70%] w-full text-[1.8rem] font-semibold leading-[1.4] uppercase`}>Timeline-based Bifurcation Of Delegates</h3>
                   <p className="text-[1rem]">All delegates at WFIS 2025 - Kenya came with a pre-determined timeline for the procurement and implementation of new solutions. Here’s a quick representation.</p>
+                </div>
+                <div className="grid grid-cols-12">
+                  <div className="lg:col-span-4 col-span-12">
+                    <CircularProgress percent={16} color="#d64145" speed={20} label="0 – 3 months" />
+                  </div>
+                  <div className="lg:col-span-4 col-span-12">
+                    <CircularProgress percent={26} color="#463e6d" speed={20} label="3 – 6 months" />
+                  </div>
+                  <div className="lg:col-span-4 col-span-12">
+                    <CircularProgress percent={58} color="#331211" speed={20} label="6 – 9 months" />
+                  </div>
                 </div>
               </div>
             </div>

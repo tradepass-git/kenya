@@ -54,7 +54,7 @@ const CurrentSpeakers = () => {
 
     return (
         <section className="current-speakers-section flex flex-col gap-[40px] pt-[400px]">
-            <div className="max-w-7xl mx-auto w-full px-4">
+            <div className="max-w-7xl mx-auto w-full">
                 {/* Section Title */}
                 <SectionTitle subtitle="2026" title="Speakers" />
             </div>
