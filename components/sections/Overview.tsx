@@ -4,9 +4,9 @@ import Fonts from "@/public/css/CustomFonts.module.css";
 import ParallaxSection from '../ui/ParallaxSection';
 const Overview = () => {
     return (
-        <section className='overview flex flex-col relative w-full'>
+        <section className='overview flex flex-col relative w-full pb-[80px] pt-[80px]'>
             <ParallaxSection>
-                <div className='cs-to-up absolute bottom-[-50px] right-0 transition-all duration-600 ease-in-out'><img src="/images/style2.png" className='md:w-[70%] w-full' /></div>
+                <div className='cs-to-up absolute bottom-[-50px] right-0 transition-all duration-600 ease-in-out flex justify-end'><img src="/images/style2.png" className='md:w-[70%] w-full' /></div>
 
                 <div className='max-w-7xl mx-auto w-full relative'>
                     <div className='cs-to-up absolute flex justify-end left-[-50px] bottom-[-110px] transition-all duration-600 ease-in-out'><img src="/images/style1.png" className='w-[70%]' /></div>

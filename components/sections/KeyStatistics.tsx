@@ -28,7 +28,7 @@ const KeyStatistics = () => {
   }, []);
 
   return (
-    <section className='key-statistics relative flex flex-col gap-[40px]'>
+    <section className='key-statistics relative flex flex-col gap-[40px] pb-[80px]'>
       <h2 className={`${customFonts["font-aeonik-black"]} text-center font-semibold uppercase leading-[1.4] min-[992px]:text-[2.3rem] text-[1.8rem]`}>Key Statistics from 2025</h2>
       <div className="overflow-hidden w-full mx-auto px-20" >
         <div className="flex flex-col gap-[30px]">

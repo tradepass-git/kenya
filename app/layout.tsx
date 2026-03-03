@@ -80,7 +80,7 @@ export default function RootLayout({
         <Header />
         <div id="smooth-wrapper" className="overflow-hidden">
           <div id="smooth-content" className="will-change-transform">
-            <div className="page-content dark:bg-bodybg bg-white flex flex-col gap-[80px]">
+            <div className="page-content dark:bg-bodybg bg-white flex flex-col gap-[0px]">
             {children}
           </div>
         </div>

@@ -3,7 +3,7 @@ import font from "@/public/css/CustomFonts.module.css";
 import FsimarketHouseCount from '../ui/FsimarketHouseCount';
 const Fsimarket = () => {
   return (
-    <section className='fsimarket pb-[80px] flex flex-col'>
+    <section className='fsimarket flex flex-col pb-[80px]'>
         <div className='max-w-7xl mx-auto w-full relative'>
             <div className='grid grid-cols-12 gap-[30px]'>
              <div className='lg:col-span-4 col-span-12'>

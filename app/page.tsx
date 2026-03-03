@@ -5,6 +5,9 @@ import KeyStatistics from "@/components/sections/KeyStatistics";
 import PowerHouse from "@/components/sections/PowerHouse";
 import Overview from "@/components/sections/Overview";
 import Fsimarket from "@/components/sections/Fsimarket";
+import Conference from "@/components/sections/Conference";
+import KeyThemes from "@/components/sections/KeyThemes";
+import Sponsors from "@/components/sections/Sponsors";
 export default function Home() {
   return (
     <>
@@ -15,6 +18,9 @@ export default function Home() {
       <PowerHouse />
       <Overview />
       <Fsimarket />
+      <Conference />
+      <KeyThemes />
+      <Sponsors />
     </>
   );
 }

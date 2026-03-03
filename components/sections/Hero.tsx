@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeroVideoAnimation from "@/components/HeroVideoAnimation";
 const Hero = () => {
   return (
-    <section className='main-banner relative bg-[var(--tp-bg-2)] flex flex-col gap-[50] lg:pt-180 sm:pt-170'>
+    <section className='main-banner relative bg-[var(--tp-bg-2)] flex flex-col gap-[50] lg:pt-180 sm:pt-170 pb-[80px]'>
       <div className='max-w-7xl mx-auto w-full'>
         <div className='flex flex-wrap flex-col items-center gap-[50px]'>
           <div className='flex'><img src="/images/wfis-kenya-logo.svg" alt="WFIS Kenya" className="w-full h-[211px]" /></div>
