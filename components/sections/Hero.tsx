@@ -11,7 +11,7 @@ const Hero = () => {
             <div className='text-center text-[1rem] font-bold text-white'>Supporting Partners</div>
             <div className='flex gap-[10px] items-center justify-center'>
               <img src="/images/supporting-partners/nifc.jpg" alt="WFIS Kenya" className="w-full h-[145px]" />
-              <img src="/images/supporting-partners/kenya_bankers_supporting_partner.jpg" alt="WFIS Kenya" className="w-full h-[145px]" />
+              <img src="/images/supporting-partners/kenya-bankers-supporting-partner.jpg" alt="WFIS Kenya" className="w-full h-[145px]" />
             </div>
           </div>
           <div className='flex flex-col items-center'>

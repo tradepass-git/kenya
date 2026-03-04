@@ -8,6 +8,7 @@ import Fsimarket from "@/components/sections/Fsimarket";
 import Conference from "@/components/sections/Conference";
 import KeyThemes from "@/components/sections/KeyThemes";
 import Sponsors from "@/components/sections/Sponsors";
+import Testimonials from "@/components/sections/Testimonials";
 export default function Home() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function Home() {
       <Conference />
       <KeyThemes />
       <Sponsors />
+      <Testimonials />
     </>
   );
 }
