@@ -9,3 +9,7 @@
 .font-aeonik-trial {
     font-family: var(--font-aeonik-trial);
 }
+
+.font-aeonik-bold{
+    font-family: var(--font-aeonik-bold);
+}

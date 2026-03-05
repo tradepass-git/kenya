@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { gsap } from "gsap";
@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const PastSpeakers = () => {
-
+    const swiperRef = useRef<any>(null);
     useEffect(() => {
         const hoverBtns = gsap.utils.toArray<HTMLElement>(".single-speaker");
         const hoverBtnItems = gsap.utils.toArray<HTMLElement>(".hover-item");
@@ -65,6 +65,7 @@ const PastSpeakers = () => {
                     loop={true}
                     navigation={false}
                     autoplay={{ delay: 3000 }}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
                     breakpoints={{
                         0: {
                             slidesPerView: 1,

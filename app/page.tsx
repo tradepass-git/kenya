@@ -9,6 +9,8 @@ import Conference from "@/components/sections/Conference";
 import KeyThemes from "@/components/sections/KeyThemes";
 import Sponsors from "@/components/sections/Sponsors";
 import Testimonials from "@/components/sections/Testimonials";
+import SeriesPartner from "@/components/sections/SeriesPartner";
+import News from "@/components/sections/News";
 export default function Home() {
   return (
     <>
@@ -23,6 +25,8 @@ export default function Home() {
       <KeyThemes />
       <Sponsors />
       <Testimonials />
+      <SeriesPartner />
+      <News />
     </>
   );
 }

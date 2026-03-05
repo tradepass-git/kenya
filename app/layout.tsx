@@ -31,6 +31,17 @@ const aeonikBlack = localFont({
   variable: "--font-aeonik-black",
 });
 
+const aeonikBold = localFont({
+  src: [
+    {
+      path: "../public/fonts/AeonikTRIAL-Bold.otf",
+      weight: "700",
+      style: "normal",
+    }
+  ],
+  variable: "--font-aeonik-bold",
+});
+
 const aeonikTrial = localFont({
   src: [
     {
@@ -74,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${mango.variable} ${aeonikBlack.variable} ${aeonikTrial.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${mango.variable} ${aeonikBlack.variable} ${aeonikTrial.variable} ${aeonikBold.variable} antialiased`}
       >
         <SmoothScroll />
         <Header />

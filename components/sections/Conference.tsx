@@ -1,11 +1,20 @@
 "use client";
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import ConferenceSlide from '../ui/ConferenceSlide';
+import Modal from '../ui/Modal';
 const Conference = () => {
+    const [open, setOpen] = useState(false);
+    const [modalTitle, setModalTitle] = useState("");
+    const [hubspotId, setHubspotId] = useState("");
+    const openModal = (title: string, id: string) => {
+        setModalTitle(title)
+        setHubspotId(id)
+        setOpen(true)
+    }
     useEffect(() => {
         const mm = gsap.matchMedia();
         mm.add("(min-width: 991px)", () => {
@@ -48,7 +57,8 @@ const Conference = () => {
                     bgColor="#333c33"
                     textColor="#ffffff"
                     btnBgColor="#e22013"
-                    btnTextColor="#ffffff" />
+                    btnTextColor="#ffffff"
+                    onOpen={openModal} />
 
                 {/* slide 2 */}
                 <ConferenceSlide
@@ -68,7 +78,8 @@ const Conference = () => {
                     bgColor="#142412"
                     textColor="#ffffff"
                     btnBgColor="#e22013"
-                    btnTextColor="#ffffff" />
+                    btnTextColor="#ffffff"
+                    onOpen={openModal} />
 
                 {/* slide 3 */}
                 <ConferenceSlide
@@ -90,7 +101,8 @@ const Conference = () => {
                     bgColor="#1c292a"
                     textColor="#ffffff"
                     btnBgColor="#e22013"
-                    btnTextColor="#ffffff" />
+                    btnTextColor="#ffffff"
+                    onOpen={openModal} />
 
                 {/* slide 4 */}
                 <ConferenceSlide
@@ -110,8 +122,17 @@ const Conference = () => {
                     bgColor="#201e11"
                     textColor="#ffffff"
                     btnBgColor="#e22013"
-                    btnTextColor="#ffffff" />
+                    btnTextColor="#ffffff"
+                    onOpen={openModal} />
             </div>
+            <Modal
+                isOpen={open}
+                title={modalTitle}
+                formId={hubspotId}
+                onClose={() => {
+                    setOpen(false);
+                }}>
+            </Modal>
         </section>
     )
 }

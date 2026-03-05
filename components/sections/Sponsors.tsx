@@ -1,7 +1,19 @@
-import React from 'react'
-import SectionTitle from '../ui/SectionTitle'
-import SponsorsImg from '../ui/SponsorsImg'
+"use client";
+
+import { useState } from "react";
+import SectionTitle from '../ui/SectionTitle';
+import SponsorsImg from '../ui/SponsorsImg';
+import Modal from '../ui/Modal';
+
 const Sponsors = () => {
+    const [open, setOpen] = useState(false);
+    const [modalTitle, setModalTitle] = useState("");
+    const [hubspotId, setHubspotId] = useState("");
+    const openModal = (title: string, id: string) => {
+        setModalTitle(title)
+        setHubspotId(id)
+        setOpen(true)
+    }
     return (
         <section className="sponsors-section relative pb-[40px] py-[80px]">
             <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px]">
@@ -38,6 +50,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Gold Sponsor"
                                 widthclass="md:w-1/3"
+                                onOpen={openModal}
                             />
                             <SponsorsImg
                                 imgUrl="/images/sponsors/gold-sponsors/NICE-Actimize-Gold-1.jpg"
@@ -46,6 +59,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Gold Sponsor"
                                 widthclass="md:w-1/3"
+                                onOpen={openModal}
                             />
                             <SponsorsImg
                                 imgUrl="/images/sponsors/gold-sponsors/asseco.jpg"
@@ -54,6 +68,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Gold Sponsor"
                                 widthclass="md:w-1/3"
+                                onOpen={openModal}
                             />
                         </div>
                     </div>
@@ -67,6 +82,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Silver Sponsor"
                                 widthclass="md:w-1/4"
+                                onOpen={openModal}
                             />
                             <SponsorsImg
                                 imgUrl="/images/sponsors/silver-sponsors/sybyl.jpg"
@@ -75,6 +91,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Silver Sponsor"
                                 widthclass="md:w-1/4"
+                                onOpen={openModal}
                             />
                             <SponsorsImg
                                 imgUrl="/images/sponsors/silver-sponsors/questionpro.png"
@@ -83,6 +100,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Silver Sponsor"
                                 widthclass="md:w-1/4"
+                                onOpen={openModal}
                             />
                         </div>
                     </div>
@@ -96,6 +114,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Associate Sponsor"
                                 widthclass="md:w-1/4"
+                                onOpen={openModal}
                             />
                             <SponsorsImg
                                 imgUrl="/images/sponsors/associate-sponsors/winjit.jpg"
@@ -104,6 +123,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Associate Sponsor"
                                 widthclass="md:w-1/4"
+                                onOpen={openModal}
                             />
                             <SponsorsImg
                                 imgUrl="/images/sponsors/associate-sponsors/hyland-wfis-kenya.jpg"
@@ -112,6 +132,7 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Associate Sponsor"
                                 widthclass="md:w-1/4"
+                                onOpen={openModal}
                             />
                             <SponsorsImg
                                 imgUrl="/images/sponsors/associate-sponsors/oradian.png"
@@ -120,11 +141,20 @@ const Sponsors = () => {
                                 weblink=""
                                 modaltitle="Associate Sponsor"
                                 widthclass="md:w-1/4"
+                                onOpen={openModal}
                             />
                         </div>
                     </div>
                 </div>
             </div>
+            <Modal
+                isOpen={open}
+                title={modalTitle}
+                formId={hubspotId}
+                onClose={() => {
+                    setOpen(false);
+                }}>
+            </Modal>
         </section>
     )
 }

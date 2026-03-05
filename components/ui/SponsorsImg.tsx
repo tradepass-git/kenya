@@ -1,14 +1,14 @@
 "use client";
 
-import React from "react";
-
+import { useState, useRef } from "react";
 type SponsorsImgProps = {
     imgUrl?: string;
     companyname?: string;
     hubspotId?: string;
     weblink?: string;
     modaltitle?: string;
-    widthclass?: string
+    widthclass?: string;
+    onOpen?: (title: string, id: string) => void
 };
 
 const SponsorsImg = ({
@@ -17,10 +17,10 @@ const SponsorsImg = ({
     hubspotId,
     weblink,
     modaltitle,
-    widthclass = 'md:w-1/3'
+    widthclass = 'md:w-1/3',
+    onOpen
 }: SponsorsImgProps) => {
     const hasLink = weblink && weblink !== "#";
-
     return hasLink ? (
         <div className={`w-full ${widthclass} px-[20px] mb-[40px] transition-all duration-[350ms] ease-in-out`}>
             <a
@@ -59,11 +59,12 @@ const SponsorsImg = ({
         <div className={`w-full ${widthclass} px-[20px] mb-[40px] transition-all duration-[350ms] ease-in-out`}>
             <a
                 href="#"
-                onClick={(e) => e.preventDefault()}
-                data-bs-toggle="modal"
-                data-bs-target="#hubspotModal"
-                data-modal-title={modaltitle}
-                data-form-id={hubspotId}
+                onClick={(e) => {
+                    e.preventDefault()
+                    if (onOpen && hubspotId && modaltitle) {
+                        onOpen(modaltitle, hubspotId)
+                    }
+                }}
                 rel="nofollow"
                 className="relative group block"
             >

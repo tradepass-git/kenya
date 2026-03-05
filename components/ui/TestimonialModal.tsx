@@ -38,7 +38,7 @@ export default function TestimonialModal({ isOpen, onClose, children }: Testimon
         {/* Close Button */}
         <button onClick={onClose}
           className="absolute right-[-15px] top-[-10px] 
-             bg-[#e22013] text-white 
+             bg-[var(--tp-primary-color)] text-white 
              w-[32px] h-[32px] 
              grid place-content-center 
              rounded-full"

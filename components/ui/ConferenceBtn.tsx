@@ -7,11 +7,19 @@ type ConferenceBtnProps = {
     BgColor?: string;
     ctaId?: string;
     hubspotId?: string;
+    onOpen?: (title: string, id: string) => void
 };
 
-const ConferenceBtn = ({ Text, Link, TextColor, BgColor, ctaId, hubspotId }: ConferenceBtnProps) => {
+const ConferenceBtn = ({ Text, Link, TextColor, BgColor, ctaId, hubspotId, onOpen }: ConferenceBtnProps) => {
     return (
-        <a href={Link} onClick={(e) => e.preventDefault()} id={ctaId} data-bs-target="#hubspotModal" data-modal-title={Text} data-form-id={hubspotId} className={styles.conference_btn}>
+        <a href={Link} 
+        onClick={(e) => {
+                    e.preventDefault()
+                    if (onOpen && hubspotId && Text) {
+                        onOpen(Text, hubspotId)
+                    }
+                }}
+        id={ctaId} rel="nofollow" className={styles.conference_btn}>
             <div className={`${styles.icon} ${styles.first}`}>
                 <div style={{ backgroundColor: BgColor }} className={`${styles["icon-fill"]}`}></div>
                 <div style={{ color: TextColor }} className={`${styles["icon-content"]}`}>

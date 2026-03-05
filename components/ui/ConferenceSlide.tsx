@@ -16,10 +16,11 @@ type ConferenceProps = {
     textColor?: string;
     btnBgColor?: string;
     btnTextColor?: string;
+    onOpen?: (title: string, id: string) => void
 
 };
 
-const ConferenceSlide = ({ videoUrl, videoImg, name, content, ctaId, buttonName, hubspotId, bgColor, textColor, btnBgColor, btnTextColor }: ConferenceProps) => {
+const ConferenceSlide = ({ videoUrl, videoImg, name, content, ctaId, buttonName, hubspotId, bgColor, textColor, btnBgColor, btnTextColor, onOpen }: ConferenceProps) => {
 
     return (
         <div className="project-panel-2">
@@ -32,7 +33,7 @@ const ConferenceSlide = ({ videoUrl, videoImg, name, content, ctaId, buttonName,
                         <h4 style={{ color: textColor }} className={`text-[1.9rem] font-bold leading-[1] ${style["font-aeonik-black"]} min-[1200]:text-[3rem] min-[441]:text-[2rem] uppercase`}>{name}</h4>
                         <div style={{ color: textColor }} className="w-full flex flex-col gap-[20px]">{content}</div>
                         <div className="flex">
-                            <ConferenceBtn Text={buttonName} Link="#" TextColor={btnTextColor} BgColor={btnBgColor} ctaId={ctaId} hubspotId={hubspotId} />
+                            <ConferenceBtn Text={buttonName} Link="#" TextColor={btnTextColor} BgColor={btnBgColor} ctaId={ctaId} hubspotId={hubspotId} onOpen={onOpen} />
                         </div>
                     </div>
                 </div>
