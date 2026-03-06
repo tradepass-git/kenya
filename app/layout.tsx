@@ -92,34 +92,34 @@ export default function RootLayout({
         <div id="smooth-wrapper" className="overflow-hidden">
           <div id="smooth-content" className="will-change-transform">
             <div className="page-content dark:bg-bodybg bg-white flex flex-col gap-[0px]">
-            {children}
+              {children}
+            </div>
+            <Footer />
           </div>
         </div>
-      </div>
-      <Footer />
-      {/* jQuery FIRST */}
-      <Script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        strategy="beforeInteractive"
-      />
+        {/* jQuery FIRST */}
+        <Script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          strategy="beforeInteractive"
+        />
 
-      {/* Make jQuery global */}
-      <Script
-        id="jquery-global"
-        strategy="beforeInteractive"
-      >
-        {`
+        {/* Make jQuery global */}
+        <Script
+          id="jquery-global"
+          strategy="beforeInteractive"
+        >
+          {`
     window.$ = window.jQuery;
   `}
-      </Script>
+        </Script>
 
-      {/* MeanMenu AFTER jQuery */}
-      <Script
-        src="/js/Navbar.js"
-        strategy="afterInteractive"
-      />
-      <MeanMenuInit />
-    </body>
+        {/* MeanMenu AFTER jQuery */}
+        <Script
+          src="/js/Navbar.js"
+          strategy="afterInteractive"
+        />
+        <MeanMenuInit />
+      </body>
     </html >
   );
 }

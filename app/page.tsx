@@ -11,6 +11,7 @@ import Sponsors from "@/components/sections/Sponsors";
 import Testimonials from "@/components/sections/Testimonials";
 import SeriesPartner from "@/components/sections/SeriesPartner";
 import News from "@/components/sections/News";
+import NewsletterSubscrib from "@/components/sections/NewsletterSubscrib";
 export default function Home() {
   return (
     <>
@@ -27,6 +28,7 @@ export default function Home() {
       <Testimonials />
       <SeriesPartner />
       <News />
+      <NewsletterSubscrib />
     </>
   );
 }

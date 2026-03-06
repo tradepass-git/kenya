@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from "next/link";
 import Modal from './ui/Modal';
+import BackToTop from "@/components/ui/BackToTop";
 export default function Header() {
     const [open, setOpen] = useState(false);
     const [modalTitle, setModalTitle] = useState<string>("");
@@ -109,6 +110,7 @@ export default function Header() {
                     </div>
                 </div>
             </header>
+            <BackToTop />
             <Modal
                 isOpen={open}
                 title={modalTitle}

@@ -15,7 +15,7 @@ export default function HeroVideoAnimation() {
 
     const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 768px)", () => {
+    mm.add("(min-width: 992px)", () => {
 
       // Set starting width properly
       gsap.set(videoRef.current, { width: "40%" });
@@ -42,12 +42,11 @@ export default function HeroVideoAnimation() {
   }, []);
 
   return (
-    <div className="w-full mx-auto px-80">
+    <div className="w-full mx-auto min-[992px]:px-80  px-0">
       <div ref={wrapperRef} className="tp-hero-bottom-img-wrap">
         <div
           ref={videoRef}
-          className="tp-hero-bottom-img md:h-[740px] min-[576px]:h-[540px] h-[440px] mx-auto"
-        >
+          className="tp-hero-bottom-img min-[992px]:h-[740px] min-[768px]:h-[540px] h-[440px] mx-auto">
           <video
             autoPlay
             loop

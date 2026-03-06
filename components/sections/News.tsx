@@ -3,6 +3,7 @@
 import { useState } from "react";
 import SectionTitle from "../ui/SectionTitle";
 import fonts from "@/public/css/CustomFonts.module.css";
+import calss from "@/public/css/CustomClass.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, Thumbs } from "swiper/modules";
@@ -24,14 +25,16 @@ const News = () => {
 
                     {/* MAIN NEWS */}
                     <div className="lg:col-span-8 col-span-12">
-                        <div className="p-[30px] border border-[#6f7aa27d] rounded-[10px] h-full">
+                        <div className="relative p-[30px] border border-[#6f7aa27d] rounded-[10px] h-full">
 
                             <Swiper
                                 modules={[Navigation, Pagination, Autoplay, Thumbs]}
                                 spaceBetween={20}
                                 loop={true}
                                 slidesPerView={1}
-                                pagination={{ clickable: true }}
+                                pagination={{ 
+                                    el: ".blog__dot",
+                                    clickable: true }}
                                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                                 thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
                             >
@@ -56,7 +59,7 @@ const News = () => {
                                                 <a
                                                     href="https://bowmanslaw.com/insights/kenya-draft-regulations-for-non-deposit-taking-credit-providers/"
                                                     target="_blank"
-                                                    className="p-[10px] text-[var(--tp-black-1)] bg-white text-[0.8rem] rounded-[100px] duration-300 transition-transform ease-out w-fit font-semibold hover:-translate-y-[8px] hover:bg-[var(--tp-primary-color)] hover:text-[var(--tp-common-white)]"
+                                                    className="py-[10px] px-[20px] text-[var(--tp-black-1)] bg-white text-[0.8rem] rounded-[100px] duration-300 transition-transform ease-out w-fit font-semibold hover:-translate-y-[8px] hover:bg-[var(--tp-primary-color)] hover:text-[var(--tp-common-white)]"
                                                 >
                                                     Read More
                                                 </a>
@@ -73,7 +76,7 @@ const News = () => {
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-
+                            <div className="absolute bottom-[30px] z-[1]"><div className={`${calss["dot"]} blog__dot`}></div></div>
                         </div>
                     </div>
 
