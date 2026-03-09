@@ -28,7 +28,7 @@ const ConferenceSlide = ({ videoUrl, videoImg, name, content, ctaId, buttonName,
                 <div className='h-full'>
                     <video src={videoUrl} poster={videoImg} autoPlay loop muted className='w-full h-full object-cover' />
                 </div>
-                <div style={{ backgroundColor: bgColor }} className={`min-[992px]:h-[100vh] min-[992px]:p-[80px] h-[100%] w-full py-[30px] px-[10px]`}>
+                <div style={{ backgroundColor: bgColor }} className={`min-[992px]:h-[100vh] min-[992px]:p-[80px] h-[100%] w-full py-[40px] px-[20px]`}>
                     <div className='flex flex-col justify-center h-full gap-[30px]'>
                         <h4 style={{ color: textColor }} className={`text-[1.9rem] font-bold leading-[1] ${style["font-aeonik-black"]} min-[1200]:text-[3rem] min-[441]:text-[2rem] uppercase`}>{name}</h4>
                         <div style={{ color: textColor }} className="w-full flex flex-col gap-[20px]">{content}</div>

@@ -54,7 +54,7 @@ const PastSpeakers = () => {
 
     return (
         <section className="past-speakers-section flex flex-col gap-[40px] pb-[80px]">
-            <div className="max-w-7xl mx-auto w-full">
+            <div className="max-w-7xl mx-auto w-full px-20">
                 {/* Section Title */}
                 <SectionTitle subtitle="Past" title="Speakers" />
             </div>

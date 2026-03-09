@@ -4,12 +4,12 @@ import FsimarketHouseCount from '../ui/FsimarketHouseCount';
 const Fsimarket = () => {
   return (
     <section className='fsimarket flex flex-col pb-[80px]'>
-        <div className='max-w-7xl mx-auto w-full relative'>
+        <div className='max-w-7xl mx-auto w-full relative px-20'>
             <div className='grid grid-cols-12 gap-[30px]'>
              <div className='lg:col-span-4 col-span-12'>
-                <div className={`${font["font-aeonik-black"]} font-black text-[3rem] min-[1200px]:text-[3.4rem] min-[441px]:text-[2.6rem] leading-[1] uppercase`}>Quick Insights On Kenya’s Fsi Market</div>
+                <div className={`${font["font-aeonik-black"]} font-black text-[3rem] min-[1200px]:text-[3.4rem] min-[441px]:text-[2.6rem] leading-[1] uppercase lg:text-left text-center`}>Quick Insights On Kenya’s Fsi Market</div>
              </div>
-             <div className='lg:col-span-4 col-span-12'>
+             <div className='lg:col-span-4 lg:col-span-4 col-span-12'>
                 <FsimarketHouseCount icon="$" suffix=".7B" value={727} text="Projected mobile money market size by 2033" duration={2000} />
              </div>
              <div className='lg:col-span-4 col-span-12'>

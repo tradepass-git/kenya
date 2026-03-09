@@ -21,9 +21,9 @@ const NewsletterSubscrib = () => {
         };
     }, []);
     return (
-        <section className='newsletter-subscrib relative p-[80px] bg-[#f7f7f8]'>
-            <div className='max-w-7xl mx-auto w-full relative'>
-                <div id="subscribe-box" className={`${calss["subscribe-box"]} flex flex-col relative items-center w-[70%] mx-auto`}></div>
+        <section className='newsletter-subscrib relative py-[80px] bg-[#f7f7f8]'>
+            <div className='max-w-7xl mx-auto w-full relative px-20'>
+                <div id="subscribe-box" className={`${calss["subscribe-box"]} flex flex-col relative items-center w-full xl:w-[70%] mx-auto`}></div>
             </div>
         </section>
     )

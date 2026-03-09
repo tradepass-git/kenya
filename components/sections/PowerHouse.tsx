@@ -7,9 +7,9 @@ import PowerHouseCount from '../ui/PowerHouseCount';
 const PowerHouse = () => {
     return (
         <section className='power-house bg-[#100201] py-[80px] flex flex-col gap-[80px]'>
-            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[20px]">
+            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[20px] px-20">
                 <SectionTitle subtitle="" title="The Powerhouse Behind" textcolor="white" />
-                <div className={`${customFonts["font-aeonik-trial"]} text-white text-[1.8rem] font-normal leading-[1.2]`}>#WFISKenya</div>
+                <div className={`${customFonts["font-aeonik-trial"]} max-[1600]:px-[20px] text-white text-[1.8rem] font-normal leading-[1.2]`}>#WFISKenya</div>
             </div>
             <div className='w-full mx-auto'>
                 <div className='grid grid-cols-12 items-stretch gap-0 w-full mx-auto'>

@@ -65,6 +65,7 @@ const Testimonials = () => {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
+          
         },
       },
       {
@@ -98,17 +99,17 @@ const Testimonials = () => {
 
   return (
     <>
-      <section className='testimonilas bg-[var(--tp-bg-1)] py-[80px] relative'>
-        <div className='max-w-7xl mx-auto w-full relative'>
+      <section className='testimonilas bg-[var(--tp-bg-1)] py-[80px] max-[991]:pt-0 relative'>
+        <div className='max-w-7xl mx-auto w-full relative px-20'>
           <Slider ref={sliderRef} {...settings}>
             {slides.map((slide) => (
               <div key={slide.id}>
-                <div className="grid grid-cols-12 items-stretch gap-[40px] lg:w-[90%] w-full mx-auto overflow-hidden">
+                <div className="grid grid-cols-12 items-stretch gap-[40px] w-full mx-auto overflow-hidden">
                   <div className="lg:col-span-5 col-span-12">
                     <div className="relative">
                       <div className={`${Style["shine-img-hover"]} relative`}>
                         <div className={`${Style["shine-img"]} overflow-hidden relative`}>
-                          <img src={slide.image} alt={`${slide.fname} ${slide.lname}`} className='w-[432px] h-[300px] object-cover rounded-[10px] transition-all duration-700 ease-in opacity-100 scale-100' />
+                          <img src={slide.image} alt={`${slide.fname} ${slide.lname}`} className='w-full  h-[300px] object-cover lg:rounded-[10px] transition-all duration-700 ease-in opacity-100 scale-100' />
                         </div>
                       </div>
                       <div className="absolute flex justify-start bottom-[30px] left-[30px]">
@@ -128,7 +129,7 @@ const Testimonials = () => {
                     <path d="M43 -0.000976562V151.999L2 192.999H43V321.999" stroke="#414141"></path>
                   </svg></div>
                   <div className="lg:col-span-5 col-span-12">
-                    <div className="lg:flex lg:flex-col lg:h-[300px] lg:gap-[30px]">
+                    <div className="lg:flex lg:flex-col lg:h-[300px] lg:gap-[30px] lg:px-0 px-[20px]">
                       <div className="w-[56px]"><img src="images/quote.png" /></div>
                       <div className="flex flex-col gap-[10px]">
                         <div className="flex flex-col gap-[15px] font-semibold text-[clamp(1rem,6vw,1.2rem)] uppercase">
@@ -178,7 +179,7 @@ const Testimonials = () => {
           </div>
 
         </div>
-        <div className="min-[1600px]:flex absolute w-[330px] top-[80px] -translate-x-[40%] opacity-[0.25]">
+        <div className="hidden min-[1600px]:flex absolute w-[330px] top-[80px] -translate-x-[40%] opacity-[0.25]">
           <img
             src={otherImage}
             alt="Other Section"

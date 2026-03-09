@@ -5,7 +5,7 @@ import KeyThemesBox from '../ui/KeyThemesBox';
 const KeyThemes = () => {
     return (
         <section className="key-themes relative py-[80px] bg-[#100201]">
-            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px]">
+            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px] px-20">
                 <SectionTitle subtitle="key" title="THEMES" textcolor="white" />
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]'>
                     <KeyThemesBox title="AI-Powered Hyper-Personalized Customer Experience" icon="/images/icons/AI+ML.svg" />

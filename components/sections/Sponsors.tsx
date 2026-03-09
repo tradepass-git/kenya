@@ -16,7 +16,7 @@ const Sponsors = () => {
     }
     return (
         <section className="sponsors-section relative pb-[40px] py-[80px]">
-            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px]">
+            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px] px-20">
                 <SectionTitle subtitle="SPONSORS" title="& PARTNERS" />
                 <div className="flex flex-col gap-[40px]">
                     <div className='flex flex-col gap-[40px] justify-center items-center w-full mx-auto'>

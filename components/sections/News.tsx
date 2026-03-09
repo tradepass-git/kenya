@@ -18,7 +18,7 @@ const News = () => {
 
     return (
         <section className="news relative py-[80px] bg-[#100201]">
-            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px]">
+            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px] px-20">
                 <SectionTitle subtitle="Latest" title="News" textcolor="white" />
 
                 <div className="grid grid-cols-12 items-stretch gap-[20px]">
@@ -40,7 +40,7 @@ const News = () => {
                             >
                                 {[...Array(7)].map((_, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+                                        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-[30px]">
 
                                             <div className="flex flex-col justify-center gap-[20px]">
                                                 <h3 className={`text-[1.2rem] text-white ${fonts["font-aeonik-bold"]}`}>
@@ -76,12 +76,12 @@ const News = () => {
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-                            <div className="absolute bottom-[30px] z-[1]"><div className={`${calss["dot"]} blog__dot`}></div></div>
+                            <div className="absolute bottom-[30px] z-[1] w-full max-[767px]:text-right max-[767px]:right-[30px]"><div className={`${calss["dot"]} blog__dot`}></div></div>
                         </div>
                     </div>
 
                     {/* THUMBNAIL NEWS */}
-                    <div className="lg:col-span-4 col-span-12">
+                    <div className="hidden lg:block lg:col-span-4 col-span-12">
                         <div className="p-[30px] border border-[#6f7aa27d] rounded-[10px] h-full">
 
                             <Swiper

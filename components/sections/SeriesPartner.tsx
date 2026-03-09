@@ -18,7 +18,7 @@ const SeriesPartner = () => {
     }
     return (
         <section className='sponsors-partner relative py-[80px]'>
-            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px]">
+            <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px] px-20">
                 <SectionTitle subtitle="SERIES" title="SPONSORS" />
                 <div className='border border-[#d0d0d07d]'>
                     <Swiper

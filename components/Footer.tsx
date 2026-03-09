@@ -9,8 +9,8 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-black">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="flex flex-wrap py-[30px] justify-between">
+        <div className="max-w-7xl mx-auto w-full px-20">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 py-[30px] xl:px-0 px-[20px] gap-[30px]">
             <div className="flex"><Link href="/"><img src="/images/Tradepass-White-1.png" alt="Tradepass" className="w-auto" /></Link ></div>
             <div className="flex flex-col gap-[20px]">
               <div className="text-[1.1rem] text-white font-black">ABOUT TRADEPASS</div>
@@ -98,7 +98,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
         <div className="bg-[#ffffff14] p-[10px] text-center text-white">All rights reserved. © {new Date().getFullYear()} Tradepass LLP.</div>
