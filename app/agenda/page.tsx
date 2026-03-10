@@ -1,13 +1,20 @@
 import React from 'react'
 import customFonts from "@/public/css/CustomFonts.module.css";
 import Tabs from "./tabs";
+async function getAgenda() {
+    const res = await fetch("https://kenya.worldfis.com/agenda-feed-json/", {
+        next: { revalidate: 60 },
+    });
+    return res.json();
+}
+
 export const metadata = {
     title: "WFIS Kenya Agenda | Smart Banking, Fintech, Insurtech & more",
     description: "The WFIS Kenya 2026 agenda will delve into mobile banking innovations, next-gen fintech strategies, latest trends shaping the financial sector & more.",
 };
 
-const AgendaPage = () => {
-
+export default async function AgendaPage() {
+    const agenda = await getAgenda();
     return (
         <>
             <section className="relative">
@@ -25,11 +32,10 @@ const AgendaPage = () => {
             </section>
             <section className="py-[80px] relative">
                 <div className="relative z-10 max-w-7xl mx-auto w-full px-20">
-                    <Tabs />
+                    <Tabs agenda={agenda} />
+                    <div className='text-[1rem]'>*The above is a running agenda and is subject to change</div>
                 </div>
             </section>
         </>
     );
-};
-
-export default AgendaPage;
+}
