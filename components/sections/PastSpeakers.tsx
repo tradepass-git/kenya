@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { gsap } from "gsap";
@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 
 const PastSpeakers = () => {
     const swiperRef = useRef<any>(null);
+    const [pastspeakers, setPastSpeakers] = useState([]);
     useEffect(() => {
         const hoverBtns = gsap.utils.toArray<HTMLElement>(".single-speaker");
         const hoverBtnItems = gsap.utils.toArray<HTMLElement>(".hover-item");
@@ -52,8 +53,16 @@ const PastSpeakers = () => {
         });
     }, []);
 
+    useEffect(() => {
+        fetch("/api/past-speakers")
+            .then((res) => res.json())
+            .then((data) => setPastSpeakers(data))
+    }, []);
+
+    //console.log(pastspeakers);
+
     return (
-        <section className="past-speakers-section flex flex-col gap-[40px] pb-[80px]">
+        <section className="past-speakers-section flex flex-col gap-[40px] min-[992px]:pt-[400px] pt-[80px] pb-[80px]">
             <div className="max-w-7xl mx-auto w-full px-20">
                 {/* Section Title */}
                 <SectionTitle subtitle="Past" title="Speakers" />
@@ -78,22 +87,23 @@ const PastSpeakers = () => {
                         },
                     }}
                 >
-                    {[...Array(7)].map((_, index) => (
+
+                    {pastspeakers.map((speaker: any, index: number) => (
                         <SwiperSlide key={index}>
                             <SingleSpeaker
-                                bgcolor="#cbe6c7"
-                                fname="Duncan"
-                                lname="Omani"
-                                designation="Chief Information Officer"
-                                company="Access Bank Plc"
-                                imageSrc="/images/speakers/Duncan.webp"
+                                bgcolor={speaker.speaker_bg_color}
+                                fname={speaker.speaker_fname}
+                                lname={speaker.speaker_lname}
+                                designation={speaker.speaker_designation}
+                                company={speaker.speaker_company}
+                                imageSrc={speaker.speaker_image}
                             />
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
             <div className="flex justify-center">
-                <ViewMoreBtn Text="View More" Link="/speakers" />
+                <ViewMoreBtn Text="View More" Link="/2026-speakers" />
             </div>
         </section>
     );

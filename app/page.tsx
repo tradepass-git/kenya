@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CurrentSpeakers />
+      { /* <CurrentSpeakers /> */}
       <PastSpeakers />
       <KeyStatistics />
       <PowerHouse />

@@ -1,5 +1,6 @@
 import React from 'react'
 import customFonts from "@/public/css/CustomFonts.module.css";
+import customCalss from "@/public/css/CustomClass.module.css";
 import Tabs from "./tabs";
 async function getAgenda() {
     const res = await fetch("https://kenya.worldfis.com/agenda-feed-json/", {
@@ -21,11 +22,11 @@ export default async function AgendaPage() {
                 <img
                     src="/images/inner-banner-bg.jpg"
                     alt="Agenda Background"
-                    className="absolute top-0 left-0 object-cover w-full h-full"
+                    className="inner-banner-img absolute top-0 left-0 object-cover w-full h-full"
                 />
 
                 <div className="relative z-10 max-w-7xl mx-auto w-full px-20">
-                    <div className="min-h-[400px] flex flex-col justify-center items-center gap-[30px]">
+                    <div className="h-[300px] md:h-[400px] flex flex-col justify-end items-center gap-[30px] pb-[80px]">
                         <h1 className={`${customFonts["font-aeonik-black"]} text-[clamp(2.4rem,8vw,4rem)] text-white uppercase`}>Agenda</h1>
                     </div>
                 </div>
@@ -33,7 +34,7 @@ export default async function AgendaPage() {
             <section className="py-[80px] relative">
                 <div className="relative z-10 max-w-7xl mx-auto w-full px-20">
                     <Tabs agenda={agenda} />
-                    <div className='text-[1rem]'>*The above is a running agenda and is subject to change</div>
+                    <div className='text-[1rem] agenda-text'>*The above is a running agenda and is subject to change</div>
                 </div>
             </section>
         </>

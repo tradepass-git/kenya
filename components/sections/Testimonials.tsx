@@ -53,7 +53,7 @@ const Testimonials = () => {
 
   const settings: Settings = {
     dots: false,
-    arrows: true,
+    arrows: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

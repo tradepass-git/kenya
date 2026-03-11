@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-import HeroVideoAnimation from "@/components/HeroVideoAnimation";
+import HeroVideoAnimation from "@/components/ui/HeroVideoAnimation";
 const Hero = () => {
   return (
     <section className='main-banner relative bg-[var(--tp-bg-2)] flex flex-col gap-[50] pt-180 min-[992px]:pb-[80px] pb-[0px]'>
